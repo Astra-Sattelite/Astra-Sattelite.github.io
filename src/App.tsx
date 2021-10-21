@@ -21,6 +21,7 @@ const App = () => {
 
   return (
     <div className={"test" + (isMobile() ? " mobile" : "")}>
+      
     </div>
   )
 }
