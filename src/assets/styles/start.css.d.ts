@@ -4,6 +4,7 @@ declare const identifiersMap: CssIdentifiersMap
 export default identifiersMap
 
 export type CssIdentifiersMap = {
+  "min": string|undefined
   "startBG": string|undefined
   "startBtn": string|undefined
 }

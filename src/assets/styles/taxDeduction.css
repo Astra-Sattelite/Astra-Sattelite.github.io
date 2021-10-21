@@ -1,0 +1,132 @@
+.taxBG {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #0000004D;
+  display: flex;
+  justify-content: center;
+}
+
+.taxPopup {
+  display: flex;
+  flex-direction: column;
+  margin-top: 120px;
+  min-height: 476px;
+  height: 59.5%;
+  min-width: 453px;
+  width: 38.3%;
+  border-radius: 30px;
+  background-color: white;
+}
+
+.taxPopup.mobile {
+  min-height: 100vh;
+  width: 100%;
+  margin-top: 0px;
+  border-radius: 0px;
+}
+
+.popupTitleCrossContainer {
+  width: 100%;
+  min-height: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.popupTitle {
+  margin-top: 32px;
+  margin-left: 32px;
+  font-family: Lab GrotesqueBold;
+  font-size: 26px;
+  font-style: normal;
+  line-height: 40px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.popupCross {
+  width: 1.5rem;
+  height: 1.5rem;
+  background-image: url("../img/cross.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-top: 16px; 
+  margin-right: 16px;
+}
+
+.popupDescr {
+  margin-top: 16px;
+  margin-left: 32px;
+  width: calc(100% - 32px);
+  font-family: Lab Grotesque;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #808080;
+}
+
+.popupInputContainer {
+  width: calc(100% - 32px);
+  margin-left: 32px;
+  margin-top: 24px;
+}
+
+.popupInputText {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #000000;
+}
+
+.popupInputText:last-child {
+  margin-top: 8px;
+  color: #EA0029;
+}
+
+.popupInput {
+  height: 40px;
+  line-height: 24px;
+  margin-top: 8px;
+  width: calc(100% - 32px);
+}
+
+.popupChoiceSection {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  width: calc(100% - 32px);
+  margin-left: 32px;
+  margin-top: 32px;
+}
+
+.temp {
+  width: calc(100% - 64px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 56px;
+  margin-left: 32px;
+  margin-top: auto;
+  margin-bottom: 32px;
+  background: linear-gradient(255.35deg, #DC3131 0.83%, rgba(255, 79, 79, 0) 108.93%),linear-gradient(0deg, #FF5E56, #FF5E56);
+  color: white;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0em;
+}
+
+.popupItem {
+  margin-left: 32px;
+  width: calc(100% - 64px);
+}
+

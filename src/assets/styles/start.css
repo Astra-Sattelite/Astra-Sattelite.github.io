@@ -1,3 +1,8 @@
+.min {
+  min-width: 320px;
+  min-height: 500px;
+}
+
 .startBG {
   background: linear-gradient(255.35deg, #DC3131 0.83%, rgba(255, 79, 79, 0) 108.93%)
             , linear-gradient(0deg, #FF5E56, #FF5E56);
@@ -11,8 +16,6 @@
 .startBtn {
   height: 56px;
   width: 198px;
-  left: 621px;
-  top: 372px;
   border: 1px solid white;
   border-radius: 6px;
   padding: 16px, 32px, 16px, 32px;
