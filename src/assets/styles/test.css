@@ -1,0 +1,11 @@
+.test {
+  background-color: black;
+  width: 200px;
+  height: 200px;
+}
+
+.test.mobile {
+  width: 100px;
+  height: 100px;
+  background-color: wheat;
+}
