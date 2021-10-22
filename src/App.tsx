@@ -4,7 +4,6 @@ import * as Utils from "./utils"
 import React, { useState } from "react"
 import CSS from "csstype"
 import { v4 } from "uuid"
-// import Checkbox from '@mui/material/Checkbox'
 
 interface ExpandingContentProps {
   inputVal: string,
@@ -18,35 +17,26 @@ const ExpandingContent = (props: ExpandingContentProps) => {
     const curRes = res.reduce((a, b) => a + b, 0)
 
     return curRes + curNum > 260000
-      ? curRes === 260000 
+      ? curRes === 260000
         ? res
         : res.concat([(260000 - curRes)])
       : sum(curNum, res.concat(curNum))
   }
 
-  const checkSalary = parseInt(props.inputVal) * 12 * 0.13
-
-  const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
-
-  const gradient = "background: linear-gradient(255.35deg, #DC3131 0.83%, rgba(255, 79, 79, 0) 108.93%), linear-gradient(0deg, #FF5E56, #FF5E56)"
+  const checkSalary = Math.floor(parseInt(props.inputVal) * 12 * 0.13)
 
   return (
     <>
-      {sum(checkSalary, []).map(item =>
-        <div className="popupItem" key={v4()}>
-          {/* <Checkbox  
-              {...label}
-              defaultChecked
-              sx={{
-                color: gradient,
-                '&.Mui-checked': {
-                  color: gradient,
-                },
-              }}
-          /> */}
-          
-          {item}
-        </div>
+      <div className="popupSalaryText">Итого вы можете внести досрочных:</div>
+      {sum(checkSalary, []).map((item, i) =>
+        <>
+          <div className="popupItem" key={v4()}>
+            <input type="checkbox" />
+            <div className="popupItemText">{item}</div>
+            <div className="popupItemGrayText">В {i + 1} год</div>
+          </div>
+          <hr className="popupItemLine"/>
+        </>
       )}
     </>
   )
@@ -54,7 +44,11 @@ const ExpandingContent = (props: ExpandingContentProps) => {
 
 type PorT = "payment" | "term" | ""
 
-const TaxDeduction = () => {
+interface TaxProps {
+  setShow: (val: boolean) => void
+}
+
+const TaxDeduction = (props: TaxProps) => {
 
   const [showCalc, setShowCalc] = useState(false)
 
@@ -104,7 +98,10 @@ const TaxDeduction = () => {
   return (
     <div className="taxBG">
       <div className={"taxPopup" + (isMobile() ? " mobile" : "")}>
-        <div className="popupTitleCrossContainer">
+        <div onClick={() => {
+          setShowCalc(false),
+          props.setShow(true)
+        }} className="popupTitleCrossContainer">
           <div className="popupTitle">Налоговый вычет</div>
           {isMobile() ? <></> : <div className="popupCross" />}
         </div>
@@ -161,7 +158,7 @@ const App = () => {
     <div className="min">
       {show 
         ? <StartBG show={show} setShow={setShow} /> 
-        : <TaxDeduction />
+        : <TaxDeduction setShow={setShow} />
       }
     </div>
   )

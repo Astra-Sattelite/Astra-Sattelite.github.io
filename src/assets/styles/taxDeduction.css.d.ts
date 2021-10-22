@@ -12,6 +12,10 @@ export type CssIdentifiersMap = {
   "popupInputContainer": string|undefined
   "popupInputText": string|undefined
   "popupItem": string|undefined
+  "popupItemGrayText": string|undefined
+  "popupItemLine": string|undefined
+  "popupItemText": string|undefined
+  "popupSalaryText": string|undefined
   "popupTitle": string|undefined
   "popupTitleCrossContainer": string|undefined
   "taxBG": string|undefined
