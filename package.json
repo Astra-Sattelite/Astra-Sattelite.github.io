@@ -1,12 +1,12 @@
 {
-  "homepage": "https://Astra-Sattelite.github.io/Astra-Sattelite.github.io",
+  "homepage": "http://Astra-Sattelite.github.io/react-nologi-plati",
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
     "serve": "vite preview",
     "predeploy": "vite build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "gh-pages": "^3.2.3",
