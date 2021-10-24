@@ -1,21 +1,21 @@
 import { useLayoutEffect, useState } from 'react'
 
-export const useWindowSize = () => {
+export const useIsMobile = () => {
 
-  const [size, setSize] = useState([0, 0]);
+  const [[width, height], setSize] = useState([0, 0])
 
   useLayoutEffect(() => {
 
     const updateSize = () => {
-      setSize([window.innerWidth, window.innerHeight]);
+      setSize([window.innerWidth, window.innerHeight])
     }
 
-    window.addEventListener('resize', updateSize);
+    window.addEventListener('resize', updateSize)
 
     updateSize();
 
-    return () => window.removeEventListener('resize', updateSize);
-  }, []);
+    return () => window.removeEventListener('resize', updateSize)
+  }, [])
 
-  return size;
+  return height > width && height >= 320 ? true : false
 }

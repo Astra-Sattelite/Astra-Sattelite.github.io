@@ -1,6 +1,6 @@
 module.exports = {
   plugins: [
-    require("postcss-nested"),
+    require("precss"),
     require("postcss-d-ts"),
     require("postcss-pxtorem"),
     require("autoprefixer"),

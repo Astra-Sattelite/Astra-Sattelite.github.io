@@ -4,7 +4,6 @@ declare const identifiersMap: CssIdentifiersMap
 export default identifiersMap
 
 export type CssIdentifiersMap = {
-  "mobile": string|undefined
   "popupChoiceSection": string|undefined
   "popupCross": string|undefined
   "popupDescr": string|undefined
@@ -20,5 +19,6 @@ export type CssIdentifiersMap = {
   "popupTitleCrossContainer": string|undefined
   "taxBG": string|undefined
   "taxPopup": string|undefined
+  "taxPopupMobile": string|undefined
   "temp": string|undefined
 }
